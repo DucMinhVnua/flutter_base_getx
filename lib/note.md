@@ -17,7 +17,7 @@
 > * Params:
 >     * chuyền routes
 
-* Dialog
+* ~~Dialog~~
 
 > * Params:
 >     * title, content
