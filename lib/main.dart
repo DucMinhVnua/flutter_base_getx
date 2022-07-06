@@ -1,4 +1,8 @@
+import 'package:base_getx/screens/home_page.dart';
+import 'package:base_getx/screens/second_page.dart';
+import 'package:base_getx/services/services_base_getx.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,12 +13,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(),
+    return GetMaterialApp(
+      initialRoute: '/',
+      getPages: [
+        BaseGetx().GetPageCustom(routeName: '/', page: () => HomePage()),
+        BaseGetx().GetPageCustom(
+            routeName: '/second',
+            page: () => SecondPage(),
+            transition: Transition.rightToLeft)
+      ],
     );
   }
 }
