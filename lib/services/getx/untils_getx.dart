@@ -1,42 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class BaseGetx {
-  /* ====== chuyển hướng có animation */
-  // Custom GetPage
-  GetPage GetPageCustom(
-      {required String routeName,
-      required Widget Function() page,
-      Transition transition = Transition.fadeIn}) {
-    return GetPage(name: routeName, page: page, transition: transition);
-  }
-
-  // chuyển hướng theo routesName
-  void navigateGetx({required String routeName, dynamic? arguments}) {
-    Get.toNamed(routeName, arguments: arguments);
-  }
-
-  /* ====== Lấy dữ liệu arguments */
-  dynamic getArguments() {
-    return Get.arguments;
-  }
-
-  /* ====== go back */
-  void goBack({Object? result}) {
-    Get.back(result: result);
-  }
-
-  /* ====== delete previous route and routes*/
-
-  void navigateGetxOff({required String routeName, dynamic? arguments}) {
-    Get.offNamed(routeName, arguments: arguments);
-  }
-
-  void navigateGetxOffAll({required String routeName, dynamic? arguments}) {
-    Get.offAllNamed(routeName, arguments: arguments);
-  }
-
-  /* ====== snackbar */
+class UntilsGetx {
   void snackbar(
       {required String title,
       required String message,
@@ -61,7 +26,6 @@ class BaseGetx {
     );
   }
 
-  /* ====== dialog */
   void dialog(
       {required String title,
       TextStyle? titleStyle,

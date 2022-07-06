@@ -1,4 +1,4 @@
-import 'package:base_getx/services/services_base_getx.dart';
+import 'package:base_getx/services/getx/navigate_getx.dart';
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatelessWidget {
@@ -6,7 +6,7 @@ class SecondPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    dynamic argument = BaseGetx().getArguments();
+    dynamic argument = NavigateGetx().getArguments();
 
     return Scaffold(
       appBar: AppBar(
@@ -17,7 +17,7 @@ class SecondPage extends StatelessWidget {
             child: ElevatedButton(
           child: Text(argument),
           onPressed: () {
-            BaseGetx().goBack();
+            NavigateGetx().goBack();
           },
         )),
       ),
