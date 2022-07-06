@@ -25,7 +25,6 @@
 >     * function button cancel, function button accept
 >     * style title, content, button
 
-* Quay lại các routes cũ
 * ~~SnackBar~~
 
 > * Params:
